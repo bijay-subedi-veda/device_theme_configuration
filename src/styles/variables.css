@@ -1,0 +1,146 @@
+:root {
+  --primary: #004cb5;
+  --primary_on: #ffffff; /* Gray 0 */
+  --primary_container: #d1e1f6; /* Primary 50 */
+  --primary_on_container: #001533; /* Primary 900 */
+
+  --primary_25: #e3eefc;
+  --primary_50: #d1e1f6;
+  --primary_100: #9dbbe6;
+  --primary_200: #7faae6;
+  --primary_300: #5c8bcc;
+  --primary_400: #4271b3;
+  --primary_500: #004099;
+  --primary_600: #003680;
+  --primary_700: #002b66;
+  --primary_800: #00204c;
+  --primary_900: #001533;
+
+  --secondary: #ff9800;
+  --secondary_on: #331f00; /* Secondary 900 */
+  --secondary_container: #f2ddbc; /* Secondary 50 */
+  --secondary_on_container: #331f00; /* Secondary 900 */
+
+  --secondary_25: #fcf2e3;
+  --secondary_50: #f2ddbc;
+  --secondary_100: #e6c89d;
+  --secondary_200: #e6bc7f;
+  --secondary_300: #cc9f5c;
+  --secondary_400: #b38542;
+  --secondary_500: #995c00;
+  --secondary_600: #804d00;
+  --secondary_700: #663d00;
+  --secondary_800: #4c2e00;
+  --secondary_900: #331f00;
+
+  --tertiary: #4caf50;
+  --brand_tertiary: #4caf50;
+  --brand_tertiary_container: #d3f2d5;
+  --brand_tertiary_on_container: #163317;
+  --tertiary_on: #ffffff; /* Gray 0 */
+  --tertiary_container: #d3f2d5; /* Tertiary 50 */
+  --tertiary_on_container: #163317; /* Tertiary 900 */
+
+  --tertiary_25: #eefcef;
+  --tertiary_50: #d3f2d5;
+  --tertiary_100: #bce6be;
+  --tertiary_200: #abe6ae;
+  --tertiary_300: #8ccc90;
+  --tertiary_400: #72b376;
+  --tertiary_500: #429946;
+  --tertiary_600: #37803b;
+  --tertiary_700: #2c662f;
+  --tertiary_800: #214c23;
+  --tertiary_900: #163317;
+
+  --gray_surface: #ffffff; /* Gray 0 */
+  --gray_on_surface: #262829; /* Gray 700 */
+  --gray_surface_variant: #eaebeb; /* Gray 50 */
+  --gray_on_surface_variant: #525556; /* Gray 500 */
+  --gray_text_soft: #838485; /* Gray 400 */
+  --gray_outline: #eaebeb; /* Gray 50 */
+  --gray_outline_brighter: #d6d6d6; /* Gray 100 */
+  --gray_surface_variant_brighter: #f8f8fa; /* Gray 25 */
+  --gray_on_surface_variant_brighter: #303233; /* Gray 600 */
+
+  --gray_0: #ffffff;
+  --gray_25: #f8f8fa;
+  --gray_50: #eaebeb;
+  --gray_100: #d6d6d6;
+  --gray_200: #c1c2c2;
+  --gray_300: #acadad;
+  --gray_400: #838485;
+  --gray_500: #525556;
+  --gray_600: #303233;
+  --gray_700: #262829;
+  --gray_800: #1d1e1f;
+  --gray_900: #131414;
+
+  --error: #b42318; /* Error 700 */
+  --error_on: #ffffff; /* Gray 0 */
+  --error_container: #fee4e2; /* Error 100 */
+  --error_on_container: #7a271a; /* Error 900 */
+
+  --error_25: #fffbfa;
+  --error_50: #fef3f2;
+  --error_100: #fee4e2;
+  --error_200: #fecdca;
+  --error_300: #fda29b;
+  --error_400: #f97066;
+  --error_500: #f04438;
+  --error_600: #d92d20;
+  --error_700: #b42318;
+  --error_800: #912018;
+  --error_900: #7a271a;
+
+  --warning: #fec84b; /* Warning 300 */
+  --warning_on: #131414; /* Gray 900 */
+  --warning_container: #feefc7; /* Warning 100 */
+  --warning_on_container: #7a2e0e; /* Warning 900 */
+
+  --warning_25: #fffcf5;
+  --warning_50: #fffaeb;
+  --warning_100: #feefc7;
+  --warning_200: #fedf89;
+  --warning_300: #fec84b;
+  --warning_400: #fdb022;
+  --warning_500: #f79009;
+  --warning_600: #dc6803;
+  --warning_700: #b54708;
+  --warning_800: #93370d;
+  --warning_900: #7a2e0e;
+
+  --success: #12b76a; /* Success 500 */
+  --success_on: #ffffff; /* Gray 0 */
+  --success_container: #d1fadf; /* Success 100 */
+  --success_on_container: #054f31; /* Success 900 */
+
+  --success_25: #f6fef9;
+  --success_50: #ecfdf3;
+  --success_100: #d1fadf;
+  --success_200: #a6f4c5;
+  --success_300: #6ce9a6;
+  --success_400: #32d583;
+  --success_500: #12b76a;
+  --success_600: #039855;
+  --success_700: #027a48;
+  --success_800: #05603a;
+  --success_900: #054f31;
+
+  --info: #2196f3; /* Info 500 */
+  --info_on: #ffffff; /* Gray 0 */
+  --info_container: #bcdffb; /* Info 100 */
+  --info_on_container: #0a2d49; /* Info 900 */
+
+  --info_25: #e9f4fe;
+  --info_50: #d3eafd;
+  --info_100: #bcdffb;
+  --info_200: #a6d5fa;
+  --info_300: #7ac0f8;
+  --info_400: #4dabf5;
+  --info_500: #2196f3;
+  --info_600: #1a78c2;
+  --info_700: #145a92;
+  --info_800: #0d3c61;
+  --info_900: #0a2d49;
+}
