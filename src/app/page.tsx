@@ -1,7 +1,9 @@
+import dynamic from "next/dynamic";
+
+const ThemeDetector = dynamic(() => import("./components/ThemeDetector"), {
+  ssr: false,
+});
+
 export default function Home() {
-  return (
-    <div className="text-primary-on bg-primary w-[500px] h-[200px] flex justify-center items-center">
-      Hello from home
-    </div>
-  );
+  return <ThemeDetector />;
 }

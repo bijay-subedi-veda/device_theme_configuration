@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import { handleThemeConfiguration } from "./utils/handleTheme";
+import { handleThemeConfiguration } from "../utils/handleTheme";
 
 const useThemeDetector = (): boolean => {
   const getCurrentTheme = (): boolean => {
@@ -29,7 +29,7 @@ const useThemeDetector = (): boolean => {
   return isDarkTheme;
 };
 
-const Home: React.FC = () => {
+const ThemeDetector: React.FC = () => {
   const isDarkTheme = useThemeDetector();
 
   return (
@@ -47,4 +47,4 @@ const Home: React.FC = () => {
   );
 };
 
-export default Home;
+export default ThemeDetector;
