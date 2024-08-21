@@ -18,6 +18,7 @@ export const getBrowserInfo = (): BrowserInfo => {
     const platform = browser.getPlatformType(); // e.g., "desktop", "mobile", "tablet"
 
     const isDarkTheme =
+      window &&
       window.matchMedia &&
       window.matchMedia("(prefers-color-scheme: dark)").matches;
 
