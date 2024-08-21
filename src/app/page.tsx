@@ -5,5 +5,19 @@ const ThemeDetector = dynamic(() => import("./components/ThemeDetector"), {
 });
 
 export default function Home() {
-  return <ThemeDetector />;
+  const getBrowserInfo = () => {
+    const userAgent = navigator.userAgent.toLowerCase();
+    if (userAgent.includes("chrome")) return "chrome";
+    if (userAgent.includes("firefox")) return "firefox";
+    if (userAgent.includes("safari")) return "safari";
+    return "unknown";
+  };
+
+  const browser = getBrowserInfo();
+  return (
+    <>
+      <p>{`The current browser is ${browser}`}</p>
+      <ThemeDetector />
+    </>
+  );
 }
