@@ -1,23 +1,30 @@
-import dynamic from "next/dynamic";
-
-const ThemeDetector = dynamic(() => import("./components/ThemeDetector"), {
-  ssr: false,
-});
+"use client";
+import { getBrowserInfo } from "./utils/browserInfo";
+import { useEffect } from "react";
+import { handleThemeConfiguration } from "./utils/handleTheme";
 
 export default function Home() {
-  const getBrowserInfo = () => {
-    const userAgent = navigator.userAgent.toLowerCase();
-    if (userAgent.includes("chrome")) return "chrome";
-    if (userAgent.includes("firefox")) return "firefox";
-    if (userAgent.includes("safari")) return "safari";
-    return "unknown";
-  };
+  const browserInfo = getBrowserInfo();
 
-  const browser = getBrowserInfo();
+  useEffect(() => {
+    handleThemeConfiguration(browserInfo?.isDarkTheme ? "dark" : "light");
+  }, [browserInfo]);
+
   return (
-    <>
-      <p>{`The current browser is ${browser}`}</p>
-      <ThemeDetector />
-    </>
+    <div className="flex flex-col gap-20">
+      <div className="text-primary-onContainer flex flex-col gap-4 bg-primary-container w-[500px] h-[200px] justify-center items-center">
+        {browserInfo ? (
+          <div>
+            <p>{`Browser Name: ${browserInfo.name} ${browserInfo.version}`}</p>
+            <p>{`Browser Version: ${browserInfo.version}`}</p>
+            <p>{`OS: ${browserInfo.os}`}</p>
+            <p>{`Platform: ${browserInfo.platform}`}</p>
+            <p>{`Theme Mode: ${browserInfo.isDarkTheme ? "Dark" : "Light"}`}</p>
+          </div>
+        ) : (
+          <p>Loading browser info...</p>
+        )}
+      </div>
+    </div>
   );
 }

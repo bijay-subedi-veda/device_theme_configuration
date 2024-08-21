@@ -1,4 +1,4 @@
-type ThemeMode = "light" | "dark";
+export type ThemeMode = "light" | "dark";
 
 interface ThemeProperties {
   [key: string]: string;
