@@ -1,10 +1,10 @@
 "use client";
-import { getBrowserInfo } from "./utils/browserInfo";
+import { useBrowserInfo } from "./utils/browserInfo";
 import { useEffect } from "react";
 import { handleThemeConfiguration } from "./utils/handleTheme";
 
 export default function Home() {
-  const browserInfo = getBrowserInfo();
+  const browserInfo = useBrowserInfo();
 
   useEffect(() => {
     handleThemeConfiguration(browserInfo?.isDarkTheme ? "dark" : "light");

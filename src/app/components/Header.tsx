@@ -1,11 +1,11 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { getBrowserInfo } from "../utils/browserInfo";
+import { useBrowserInfo } from "../utils/browserInfo";
 import { handleThemeConfiguration, ThemeMode } from "../utils/handleTheme";
 
 const Header = () => {
-  const browserInfo = getBrowserInfo();
+  const browserInfo = useBrowserInfo();
 
   const [userTheme, setUserTheme] = useState<ThemeMode>(
     browserInfo?.isDarkTheme ? "dark" : "light"
